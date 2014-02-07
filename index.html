@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pushing to GH-Pages for Caitlin</title>
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/foundation.css">
+	</head>
+	<body>
+		<div class="row">
+			<div class="large-10 large-centered columns">
+				<h1>Using Git-Cola To Push to GitHub Pages</h1>
+				<p class="panel">We'll be pushing Git repositories to a special branch called gh-pages in session 3. This lets us put our own webpages online for free.</p>
+				<h2>1) Install Git-Cola</h2>
+				<p>
+					Git-cola is very similar to gitg, but is a little easier to use. You install it in the same way. From the command line type:
+				<pre>
+					sudo apt-get install git-cola
+				</pre>
+				</p>
+				<h2>2) Initialize Git</h2>
+				<p>
+					Use the terminal to initialize a git repository in your website folder. Use the cd command to "change directory" to your website folder. Use it like so:
+				<pre>
+					cd /home/Caitlin/Documents/my_website
+				</pre>
+					Where /home/Caitlin/Documents/my_website is the path to the website (folder) that you are trying to put online.
+				</p>
+				<p>
+					Then type: (which means initialize an empty git repository in this folder)
+					<pre>git init</pre>
+				</p>
+				<h2>3) Select your website folder</h2>
+				<p>
+					Open git-cola and it should prompt you to either open, clone or close. 
+				</p>
+				<p>
+					Select open and navigate to your website folder. 
+				</p>
+				<h2>4) Add and commit locally</h2>
+					<div data-alert class="alert-box">
+					  This should make way more sense after I explain what adding and committing locally is...
+					</div>
+				<p>
+					All of your files will be listed in the box on the right. For each that you want to commit, select it then hit stage from the list on the right. 	
+				</p>
+				<img src="images/staging.png" />
+				<p>
+					Type your commit message in the box on the left and hit commit. 
+				</p>
+				<img src="images/commit.png" />
+				<h2>5) Create a Repository on Github</h2>
+				<p>
+					Got to github.com and login. Create a new repository (button top right) and copy the URL to it. Should start https://github.com/YOUR_USERNAME/REPO_NAME.git</p>
+				</p>
+				<h2>6) Add a remote branch</h2>
+				<p>
+					Git-cola is a bit off a pain when it comes to adding remote branches. We need to use the terminal again (just to set it up). Use the cd instructions again to make sure you are in the right folder. You can check where you are with pwd. Type pwd and it will tell you where you are, it stands for print working directory. 
+				</p>
+				<p>
+					Pop back over to github. You should have this page open still...
+					<img src="images/originImage.png" />
+					Copy the line that starts git remote add origin and paste it into your terminal, hit enter. Paste it into the terminal again and change the origin to read gh-pages. Hit enter again. You've just added two remote branches into your repository.
+				</p>
+				<h2>7) Push to origin</h2>
+				<p>
+					Use the push button from the menu on the right, but first hit rescan. Select origin from the top box and master from the middle. It should look like this:
+					<img src="images/pushingToOrigin.png" />
+					Hit push. It will prompt for your username and pw. Enter them.
+				</p>
+				<h2>8) Publishing online</h2>
+				<p>
+					For each version of your site that you want to publish, first use the push instructions above to make sure you've pushed to origin. Then use the push button again, but this time select gh-pages in the top box and the bottom. Make it look like so: 
+					<img src="images/ghpages.png" />
+				</p>
+				<h2>9) Checking your work</h2>
+				<p>
+					Find your repository on GitHub. You should now have 2 branches. If you go into the settings you should also find a URL where your site is published.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
